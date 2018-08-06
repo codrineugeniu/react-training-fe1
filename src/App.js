@@ -36,15 +36,16 @@ class App extends Component {
   }
 
   render() {
+    const { selectedColor, inputColor } = this.state;
     return (
       <div className="App">
         <MyHeader
           title="Hello React-Demo"
-          color={this.state.selectedColor}
+          color={selectedColor}
         />
         <div>
           <ColorChooser
-            selectedColor={this.state.inputColor}
+            selectedColor={inputColor}
             onColorChange={this.onColorChange}
             onFocus={this.onFocus}
           />
@@ -56,9 +57,12 @@ class App extends Component {
   }
 }
 
-
-const Footer = () => <footer>
-  <p>ColorChooser Footer</p>
-</footer>;
+const Footer = () => (
+  <footer>
+    <p>
+      ColorChooser Footer
+    </p>
+  </footer>
+);
 
 export default App;
