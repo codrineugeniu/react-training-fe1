@@ -1,0 +1,19 @@
+{
+  "buttons": [
+    {
+      "name": "Green",
+      "hexCode": "#8CB541"
+    },
+    {
+      "name": "Blue",
+      "hexCode": "#325C7D"
+    },
+    {
+      "name": "White",
+      "hexCode": "#FFF"
+    }
+  ],
+  "profile": {
+    "selectedColor": "#325C7D"
+  }
+}
