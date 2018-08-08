@@ -1,8 +1,10 @@
 import React from 'react';
 
-const MyHeader = ({ title, color }) => (
+const MyHeader = ({ title, color, hexCode }) => (
 
-  <header>
+  <header style={{
+    backgroundColor: hexCode,
+  }}>
     <h1>
       {title}
     </h1>

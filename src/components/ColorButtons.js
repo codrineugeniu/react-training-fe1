@@ -7,17 +7,18 @@ class ColorButtons extends Component {
   }
 
   render() {
+    const { buttons } = this.props;
     return (
       <div className="color-button-container">
-        <button type="button" onClick={() => this.onClick('Green')}>
-          Green
-        </button>
-        <button type="button" onClick={() => this.onClick('Fuchsia')}>
-          Fuchsia
-        </button>
-        <button type="button" onClick={() => this.onClick('White')}>
-          White
-        </button>
+        {
+          buttons.length > 0 ? buttons.map((button) => {
+            return (
+              <button type="button" onClick={() => this.onClick(button)}>
+                {button.name}
+              </button>
+            );
+          }) : <span>Loading...</span>
+        }
       </div>
     );
   }
